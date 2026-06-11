@@ -23,6 +23,7 @@ The design focuses on a streaming RTL architecture suitable for image-processing
 
 ## Project Structure
 
+```text
 .
 ├── 00_src/      # RTL source files
 ├── 01_tb/       # SystemVerilog testbenches
@@ -40,3 +41,4 @@ The design focuses on a streaming RTL architecture suitable for image-processing
 └── 05_fpga/     # FPGA implementation and demo files
     ├── 00_quartus/
     └── 01_results/
+```
