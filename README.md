@@ -24,7 +24,6 @@ The design focuses on a streaming RTL architecture suitable for image-processing
 ## Project Structure
 
 ```text
-.
 ├── 00_src/      # RTL source files
 ├── 01_tb/       # SystemVerilog testbenches
 ├── 02_doc/      # Project report and design figures
