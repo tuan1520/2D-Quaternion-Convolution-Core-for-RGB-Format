@@ -1,0 +1,228 @@
+xrun(64): 24.09-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s005: Started on Apr 02, 2026 at 00:44:09 +07
+xrun
+	-f filelist_tap_4lane.f
+		../../00_src/xor_gate.sv
+		../../00_src/half_adder_1b.sv
+		../../00_src/full_adder_1b.sv
+		../../00_src/cla_3b.sv
+		../../00_src/cla_4b.sv
+		../../00_src/adder_signed_24b.sv
+		../../00_src/adder_signed_18b.sv
+		../../00_src/booth_shifted_product.sv
+		../../00_src/wallace_tree.sv
+		../../00_src/multiplier_booth_wallace_9core.sv
+		../../00_src/tap_3x3_4lane.sv
+		../../01_tb/tb_tap_4lane.sv
+	-sv
+	+access+rw
+file: ../../00_src/xor_gate.sv
+	module worklib.xor_gate:sv
+		errors: 0, warnings: 0
+file: ../../00_src/half_adder_1b.sv
+	module worklib.half_adder_1b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/full_adder_1b.sv
+	module worklib.full_adder_1b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/cla_3b.sv
+	module worklib.cla_3b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/cla_4b.sv
+	module worklib.cla_4b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/adder_signed_24b.sv
+	module worklib.adder_signed_24b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/adder_signed_18b.sv
+	module worklib.adder_signed_18b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/booth_shifted_product.sv
+	module worklib.booth_3b_group_gen:sv
+		errors: 0, warnings: 0
+	module worklib.booth_encoder_radix4:sv
+		errors: 0, warnings: 0
+	module worklib.booth_pp_gen_18b:sv
+		errors: 0, warnings: 0
+	module worklib.booth_recode_9b:sv
+		errors: 0, warnings: 0
+	module worklib.booth_shifted_product:sv
+		errors: 0, warnings: 0
+file: ../../00_src/wallace_tree.sv
+	module worklib.wallace_5to2_18b:sv
+		errors: 0, warnings: 0
+	module worklib.wallace_tree:sv
+		errors: 0, warnings: 0
+file: ../../00_src/multiplier_booth_wallace_9core.sv
+	module worklib.multiplier_booth_wallace_1core:sv
+		errors: 0, warnings: 0
+	module worklib.multiplier_booth_wallace_9core:sv
+		errors: 0, warnings: 0
+file: ../../00_src/tap_3x3_4lane.sv
+	module worklib.subtractor_signed_18b:sv
+		errors: 0, warnings: 0
+	module worklib.adder3_signed_18b:sv
+		errors: 0, warnings: 0
+	module worklib.negate_signed_18b:sv
+		errors: 0, warnings: 0
+	module worklib.tap_input_pipe_3x3:sv
+		errors: 0, warnings: 0
+	module worklib.tap_4lane:sv
+		errors: 0, warnings: 0
+	module worklib.tap_3x3_4lane:sv
+		errors: 0, warnings: 0
+file: ../../01_tb/tb_tap_4lane.sv
+	module worklib.tb_tap_4lane:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		half_adder_1b
+		cla_3b
+		tap_input_pipe_3x3
+		tap_3x3_4lane
+		tb_tap_4lane
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb_tap_4lane:sv <0x7415a739>
+			streams:  22, words: 46665
+		worklib.subtractor_signed_18b:sv <0x0cc61a8a>
+			streams:   5, words:  1465
+		worklib.negate_signed_18b:sv <0x577041fa>
+			streams:   4, words:  1281
+		worklib.adder3_signed_18b:sv <0x6e88fd64>
+			streams:   6, words:  1843
+		worklib.adder_signed_18b:sv <0x342a9887>
+			streams:  30, words: 12497
+		worklib.full_adder_1b:sv <0x7a30dd59>
+			streams:   6, words:  1707
+		worklib.wallace_tree:sv <0x490cd661>
+			streams:  10, words:  2921
+		worklib.cla_4b:sv <0x54dea648>
+			streams:  17, words:  8584
+		worklib.adder_signed_24b:sv <0x7a83b8f3>
+			streams:  26, words: 13707
+		worklib.booth_pp_gen_18b:sv <0x0a386127>
+			streams:  11, words:  4354
+		worklib.booth_encoder_radix4:sv <0x61fb81a7>
+			streams:   1, words:   403
+		worklib.booth_3b_group_gen:sv <0x7b51f975>
+			streams:   1, words:   951
+		worklib.booth_recode_9b:sv <0x69867e91>
+			streams:  15, words:  4330
+		worklib.booth_shifted_product:sv <0x6ca6c12f>
+			streams:  23, words:  7207
+		worklib.multiplier_booth_wallace_1core:sv <0x357b215d>
+			streams:  12, words:  3584
+		worklib.multiplier_booth_wallace_9core:sv <0x1f27cf58>
+			streams:  18, words:  6759
+		worklib.tap_4lane:sv <0x59ac149b>
+			streams:  38, words: 11817
+		worklib.tap_3x3_4lane:sv <0x149f3648>
+			streams:  36, words: 12384
+		worklib.tap_input_pipe_3x3:sv <0x32c779c6>
+			streams:   4, words:  5267
+		worklib.cla_3b:sv <0x6d525942>
+			streams:  14, words:  6122
+		worklib.xor_gate:sv <0x09932f20>
+			streams:   3, words:   700
+		worklib.half_adder_1b:sv <0x2a7a9221>
+			streams:   2, words:   445
+		worklib.wallace_5to2_18b:sv <0x18dddc43>
+			streams:  13, words:  4177
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                71,752      23
+		Registers:             282,273     328
+		Scalar wires:          485,739       -
+		Expanded wires:         56,700   2,550
+		Vectored wires:         25,308       -
+		Always blocks:           1,092       7
+		Initial blocks:              3       3
+		Cont. assignments:     225,557      73
+		Pseudo assignments:    135,245       -
+		Process Clocks:            191       3
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.half_adder_1b:sv
+Loading snapshot worklib.half_adder_1b:sv .................... Done
+xcelium> source /home/yellow/ee3165_23/tools/eda/cadence/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> run
+--------------------------------------------------
+[CASE] RESET_INIT | t=3000
+  rst_o : y0=0 y1=0 y2=0 y3=0
+[PASS] RESET_INIT
+--------------------------------------------------
+[CASE] CAP_ZERO | t=46000
+  in  : R=0 G=0 B=0 | P=0 Q=0 S=0
+  mulE: RP=0 RQ=0 RS=0 | GP=0 GQ=0 GS=0 | BP=0 BQ=0 BS=0
+  yE  : y0=0 y1=0 y2=0 y3=0
+  yO  : y0=0 y1=0 y2=0 y3=0
+[PASS] CAP_ZERO
+--------------------------------------------------
+[CASE] HOLD_AFTER_ZERO | t=76000
+  new_in : R=1 G=2 B=3 | P=4 Q=5 S=6
+  hold_o : y0=0 y1=0 y2=0 y3=0
+[PASS] HOLD_AFTER_ZERO
+--------------------------------------------------
+[CASE] CAP_ALL_POS_SMALL | t=106000
+  in  : R=1 G=2 B=3 | P=4 Q=5 S=6
+  mulE: RP=4 RQ=5 RS=6 | GP=8 GQ=10 GS=12 | BP=12 BQ=15 BS=18
+  yE  : y0=-32 y1=-3 y2=6 y3=-3
+  yO  : y0=-32 y1=-3 y2=6 y3=-3
+[PASS] CAP_ALL_POS_SMALL
+--------------------------------------------------
+[CASE] CAP_MIXED_SIGN_1 | t=136000
+  in  : R=5 G=7 B=9 | P=-3 Q=2 S=-1
+  mulE: RP=-15 RQ=10 RS=-5 | GP=-21 GQ=14 GS=-7 | BP=-27 BQ=18 BS=-9
+  yE  : y0=10 y1=-25 y2=-22 y3=31
+  yO  : y0=10 y1=-25 y2=-22 y3=31
+[PASS] CAP_MIXED_SIGN_1
+--------------------------------------------------
+[CASE] CAP_MIXED_SIGN_2 | t=166000
+  in  : R=37 G=85 B=12 | P=7 Q=-9 S=11
+  mulE: RP=259 RQ=-333 RS=407 | GP=595 GQ=-765 GS=935 | BP=84 BQ=-108 BS=132
+  yE  : y0=374 y1=1043 y2=-323 y3=-928
+  yO  : y0=374 y1=1043 y2=-323 y3=-928
+[PASS] CAP_MIXED_SIGN_2
+--------------------------------------------------
+[CASE] CAP_BOUNDARY_PIXEL | t=196000
+  in  : R=255 G=128 B=64 | P=1 Q=-1 S=2
+  mulE: RP=255 RQ=-255 RS=510 | GP=128 GQ=-128 GS=256 | BP=64 BQ=-64 BS=128
+  yE  : y0=-255 y1=320 y2=-446 y3=-383
+  yO  : y0=-255 y1=320 y2=-446 y3=-383
+[PASS] CAP_BOUNDARY_PIXEL
+--------------------------------------------------
+[CASE] CAP_BOUNDARY_KERNEL | t=226000
+  in  : R=10 G=20 B=30 | P=-128 Q=127 S=-64
+  mulE: RP=-1280 RQ=1270 RS=-640 | GP=-2560 GQ=2540 GS=-1280 | BP=-3840 BQ=3810 BS=-1920
+  yE  : y0=660 y1=-5090 y2=-3200 y3=3830
+  yO  : y0=660 y1=-5090 y2=-3200 y3=3830
+[PASS] CAP_BOUNDARY_KERNEL
+--------------------------------------------------
+[CASE] CAP_MAX_POS_COMBO | t=256000
+  in  : R=255 G=255 B=255 | P=127 Q=127 S=127
+  mulE: RP=32385 RQ=32385 RS=32385 | GP=32385 GQ=32385 GS=32385 | BP=32385 BQ=32385 BS=32385
+  yE  : y0=-97155 y1=0 y2=0 y3=0
+  yO  : y0=-97155 y1=0 y2=0 y3=0
+[PASS] CAP_MAX_POS_COMBO
+--------------------------------------------------
+[CASE] HOLD_AFTER_NONZERO | t=286000
+  new_in : R=10 G=20 B=30 | P=40 Q=50 S=60
+  hold_o : y0=-97155 y1=0 y2=0 y3=0
+[PASS] HOLD_AFTER_NONZERO
+--------------------------------------------------
+[CASE] RESET_MID | t=289000
+  rst_o : y0=0 y1=0 y2=0 y3=0
+[PASS] RESET_MID
+========================================
+tb_tap_4lane DONE
+PASS = 11
+FAIL = 0
+========================================
+TEST PASSED
+Simulation complete via $finish(1) at time 289 NS + 0
+/home/yellow/ee3165_23/Tuna/01_tb/tb_tap_4lane.sv:331             $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s005: Exiting on Apr 02, 2026 at 00:44:21 +07  (total: 00:00:12)

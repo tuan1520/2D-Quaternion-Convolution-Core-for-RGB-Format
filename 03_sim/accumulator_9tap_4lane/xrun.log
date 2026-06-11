@@ -1,0 +1,92 @@
+xrun(64): 24.09-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s005: Started on Apr 02, 2026 at 02:06:48 +07
+xrun
+	-f filelist_accumulator_9tap_4lane.f
+		../../00_src/xor_gate.sv
+		../../00_src/half_adder_1b.sv
+		../../00_src/full_adder_1b.sv
+		../../00_src/cla_4b.sv
+		../../00_src/adder_signed_24b.sv
+		../../00_src/accumulator_9tap_4lane.sv
+		../../01_tb/tb_accumulator_9tap_4lane.sv
+	-sv
+	+access+rw
+Recompiling... reason: file '/home/yellow/ee3165_23/Tuna/00_src/accumulator_9tap_4lane.sv' is newer than expected.
+	expected: Thu Mar 26 00:35:01 2026
+	actual:   Thu Apr  2 02:06:43 2026
+file: ../../00_src/accumulator_9tap_4lane.sv
+	module worklib.accumulator_9tap_4lane:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		half_adder_1b
+		full_adder_1b
+		tb_accumulator_9tap_4lane
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.cla_4b:sv <0x54dea648>
+			streams:  17, words:  8584
+		worklib.adder_signed_24b:sv <0x7a83b8f3>
+			streams:  26, words: 13707
+		worklib.tb_accumulator_9tap_4lane:sv <0x6cd72616>
+			streams:  57, words: 150995
+		worklib.full_adder_1b:sv <0x433c8301>
+			streams:   6, words:  1537
+		worklib.xor_gate:sv <0x09932f20>
+			streams:   3, words:   700
+		worklib.half_adder_1b:sv <0x2a7a9221>
+			streams:   2, words:   445
+		worklib.accumulator_9tap_4lane:sv <0x3fda9dc0>
+			streams:  91, words: 57604
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                1,767       7
+		Registers:              6,999     134
+		Scalar wires:          12,412       -
+		Expanded wires:         1,536      64
+		Vectored wires:           576       -
+		Always blocks:              5       5
+		Initial blocks:             3       3
+		Cont. assignments:      5,729      69
+		Pseudo assignments:     3,231       -
+		Process Clocks:             4       1
+		Simulation timescale:     1ps
+	Writing initial simulation snapshot: worklib.half_adder_1b:sv
+Loading snapshot worklib.half_adder_1b:sv .................... Done
+xcelium> source /home/yellow/ee3165_23/tools/eda/cadence/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> run
+--------------------------------------------------
+[CASE] RESET_INIT | t=3000
+  rst : S=0 I=0 J=0 K=0
+[PASS] RESET_INIT
+--------------------------------------------------
+[CASE] CAP_CASE_1 | t=56000
+  exp : S=-96452 I=-3831 J=-3965 K=2591
+  obs : S=-96452 I=-3831 J=-3965 K=2591
+[PASS] CAP_CASE_1
+--------------------------------------------------
+[CASE] HOLD_AFTER_CASE_1 | t=96000
+  hold: S=-96452 I=-3831 J=-3965 K=2591
+[PASS] HOLD_AFTER_CASE_1
+--------------------------------------------------
+[CASE] CAP_CASE_2 | t=136000
+  exp : S=-228 I=136 J=2 K=724
+  obs : S=-228 I=136 J=2 K=724
+[PASS] CAP_CASE_2
+--------------------------------------------------
+[CASE] RESET_MID | t=139000
+  rst : S=0 I=0 J=0 K=0
+[PASS] RESET_MID
+========================================
+tb_accumulator_9tap_4lane DONE
+PASS = 5
+FAIL = 0
+========================================
+TEST PASSED
+Simulation complete via $finish(1) at time 139 NS + 0
+/home/yellow/ee3165_23/Tuna/01_tb/tb_accumulator_9tap_4lane.sv:321             $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s005: Exiting on Apr 02, 2026 at 02:06:51 +07  (total: 00:00:03)

@@ -1,0 +1,173 @@
+xrun(64): 24.09-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s005: Started on Apr 21, 2026 at 22:46:20 +07
+xrun
+	-f filelist_pure_quat_conv2d_3x3_controller.f
+		../../00_src/pure_quat_conv2d_3x3_controller.sv
+		../../01_tb/tb_pure_quat_conv2d_3x3_controller.sv
+	+access+rw
+	-sv
+Recompiling... reason: file '/home/yellow/ee3165_23/test2/02_sim/xcelium.d/01_tb/tb_pure_quat_conv2d_3x3_controller.sv' is newer than expected.
+	expected: Tue Apr 21 22:33:27 2026
+	actual:   Tue Apr 21 22:46:06 2026
+file: ../../01_tb/tb_pure_quat_conv2d_3x3_controller.sv
+	module worklib.tb_pure_quat_conv2d_3x3_controller:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_pure_quat_conv2d_3x3_controller
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb_pure_quat_conv2d_3x3_controller:sv <0x64b59a72>
+			streams:  29, words: 62606
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       3
+		Registers:              71      70
+		Scalar wires:           43       -
+		Vectored wires:          2       -
+		Always blocks:           7       7
+		Initial blocks:          3       3
+		Cont. assignments:       9      10
+		Pseudo assignments:     22       -
+		Process Clocks:          3       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_pure_quat_conv2d_3x3_controller:sv
+Loading snapshot worklib.tb_pure_quat_conv2d_3x3_controller:sv .................... Done
+xcelium> source /home/yellow/ee3165_23/tools/eda/cadence/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> run
+--------------------------------------------------
+[CASE] RESET | t=3000
+  state=0 busy=1 frame_done=0 ker_load=0
+  lb=0 win=0 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] RESET
+  int : x_ge_2=0 y_ge_2=0 window_ready=0
+        win_fill_valid_now=0 pipe_in_valid_dly=000 pipe_in_valid_now=0
+[PASS] RESET_INT
+--------------------------------------------------
+[CASE] AFTER_START_EDGE | t=26000
+  state=1 busy=1 frame_done=0 ker_load=1
+  lb=0 win=0 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] AFTER_START_EDGE
+--------------------------------------------------
+[CASE] STAY_LOAD_KERNEL | t=36000
+  state=1 busy=1 frame_done=0 ker_load=1
+  lb=0 win=0 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] STAY_LOAD_KERNEL
+--------------------------------------------------
+[CASE] TO_FILL | t=46000
+  state=2 busy=0 frame_done=0 ker_load=0
+  lb=0 win=0 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] TO_FILL
+--------------------------------------------------
+[CASE] FILL_Y_LT_2 | t=61000
+  state=2 busy=0 frame_done=0 ker_load=0
+  lb=1 win=1 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] FILL_Y_LT_2
+  int : x_ge_2=0 y_ge_2=0 window_ready=0
+        win_fill_valid_now=0 pipe_in_valid_dly=000 pipe_in_valid_now=0
+[PASS] FILL_Y_LT_2_INT
+--------------------------------------------------
+[CASE] FILL_ROW_X0 | t=71000
+  state=2 busy=0 frame_done=0 ker_load=0
+  lb=1 win=1 win_valid=1 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] FILL_ROW_X0
+  int : x_ge_2=0 y_ge_2=1 window_ready=0
+        win_fill_valid_now=1 pipe_in_valid_dly=000 pipe_in_valid_now=0
+[PASS] FILL_ROW_X0_INT
+  int : x_ge_2=0 y_ge_2=1 window_ready=0
+        win_fill_valid_now=1 pipe_in_valid_dly=001 pipe_in_valid_now=0
+[PASS] FILL_ROW_X0_POST_INT
+--------------------------------------------------
+[CASE] FILL_ROW_X1 | t=81000
+  state=2 busy=0 frame_done=0 ker_load=0
+  lb=1 win=1 win_valid=1 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] FILL_ROW_X1
+  int : x_ge_2=0 y_ge_2=1 window_ready=0
+        win_fill_valid_now=1 pipe_in_valid_dly=001 pipe_in_valid_now=0
+[PASS] FILL_ROW_X1_INT
+  int : x_ge_2=0 y_ge_2=1 window_ready=0
+        win_fill_valid_now=1 pipe_in_valid_dly=011 pipe_in_valid_now=0
+[PASS] FILL_ROW_X1_POST_INT
+--------------------------------------------------
+[CASE] FILL_ROW_X2 | t=91000
+  state=2 busy=0 frame_done=0 ker_load=0
+  lb=1 win=1 win_valid=1 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] FILL_ROW_X2
+  int : x_ge_2=1 y_ge_2=1 window_ready=1
+        win_fill_valid_now=1 pipe_in_valid_dly=011 pipe_in_valid_now=0
+[PASS] FILL_ROW_X2_INT
+  int : x_ge_2=1 y_ge_2=1 window_ready=1
+        win_fill_valid_now=1 pipe_in_valid_dly=111 pipe_in_valid_now=1
+[PASS] FILL_ROW_X2_POST_INT
+--------------------------------------------------
+[CASE] FILL_PIPE_READY_COMB | t=101000
+  state=2 busy=0 frame_done=0 ker_load=0
+  lb=1 win=1 win_valid=1 pipe_shift=1 tap_load=1
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] FILL_PIPE_READY_COMB
+  int : x_ge_2=1 y_ge_2=1 window_ready=1
+        win_fill_valid_now=1 pipe_in_valid_dly=111 pipe_in_valid_now=1
+[PASS] FILL_PIPE_READY_COMB_INT
+--------------------------------------------------
+[CASE] ENTER_RUN | t=106000
+  state=3 busy=0 frame_done=0 ker_load=0
+  lb=1 win=1 win_valid=1 pipe_shift=1 tap_load=1
+  out_valid=0 out_latch=0 out_empty=0
+[PASS] ENTER_RUN
+--------------------------------------------------
+[CASE] RUN_OUT_VALID_FIRST | t=176000
+  state=3 busy=0 frame_done=0 ker_load=0
+  lb=1 win=1 win_valid=1 pipe_shift=1 tap_load=1
+  out_valid=1 out_latch=1 out_empty=0
+[PASS] RUN_OUT_VALID_FIRST
+--------------------------------------------------
+[CASE] ENTER_FLUSH | t=186000
+  state=4 busy=1 frame_done=0 ker_load=0
+  lb=0 win=0 win_valid=0 pipe_shift=1 tap_load=0
+  out_valid=1 out_latch=1 out_empty=0
+[PASS] ENTER_FLUSH
+--------------------------------------------------
+[CASE] FLUSH_EMPTY_LAST | t=266000
+  state=4 busy=1 frame_done=0 ker_load=0
+  lb=0 win=0 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] FLUSH_EMPTY_LAST
+--------------------------------------------------
+[CASE] DONE_STATE | t=276000
+  state=5 busy=1 frame_done=1 ker_load=0
+  lb=0 win=0 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] DONE_STATE
+--------------------------------------------------
+[CASE] BACK_TO_IDLE | t=286000
+  state=0 busy=1 frame_done=0 ker_load=0
+  lb=0 win=0 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] BACK_TO_IDLE
+--------------------------------------------------
+[CASE] NO_RESTART_WHEN_START_HELD | t=296000
+  state=0 busy=1 frame_done=0 ker_load=0
+  lb=0 win=0 win_valid=0 pipe_shift=0 tap_load=0
+  out_valid=0 out_latch=0 out_empty=1
+[PASS] NO_RESTART_WHEN_START_HELD
+========================================
+tb_pure_quat_conv2d_3x3_controller DONE
+PASS = 25
+FAIL = 0
+========================================
+TEST PASSED
+Simulation complete via $finish(1) at time 296 NS + 0
+/home/yellow/ee3165_23/test2/02_sim/xcelium.d/01_tb/tb_pure_quat_conv2d_3x3_controller.sv:439             $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s005: Exiting on Apr 21, 2026 at 22:46:23 +07  (total: 00:00:03)

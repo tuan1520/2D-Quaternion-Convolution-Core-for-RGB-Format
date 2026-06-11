@@ -1,0 +1,97 @@
+xrun(64): 24.09-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s005: Started on Apr 01, 2026 at 22:43:39 +07
+xrun
+	-f filelist_adder_signed_24b.f
+		../../00_src/xor_gate.sv
+		../../00_src/half_adder_1b.sv
+		../../00_src/full_adder_1b.sv
+		../../00_src/cla_4b.sv
+		../../00_src/adder_signed_24b.sv
+		../../01_tb/tb_adder_signed_24b.sv
+	-sv
+	+access+rw
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		half_adder_1b
+		full_adder_1b
+		tb_adder_signed_24b
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.cla_4b:sv <0x54dea648>
+			streams:  17, words:  8584
+		worklib.adder_signed_24b:sv <0x1553d564>
+			streams:  26, words: 13707
+		worklib.tb_adder_signed_24b:sv <0x0f16e76f>
+			streams:   8, words: 16305
+		worklib.full_adder_1b:sv <0x433c8301>
+			streams:   6, words:  1537
+		worklib.xor_gate:sv <0x09932f20>
+			streams:   3, words:   700
+		worklib.half_adder_1b:sv <0x2a7a9221>
+			streams:   2, words:   445
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                61       6
+		Registers:             246      46
+		Scalar wires:          412       -
+		Expanded wires:         48       2
+		Vectored wires:         15       -
+		Initial blocks:          2       2
+		Cont. assignments:     190      26
+		Pseudo assignments:    104       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.half_adder_1b:sv
+Loading snapshot worklib.half_adder_1b:sv .................... Done
+xcelium> source /home/yellow/ee3165_23/tools/eda/cadence/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> run
+[PASS] t=6000 | a=0, b=0, cin=0 | sum=0, ovf=0
+[PASS] t=7000 | a=1, b=2, cin=0 | sum=3, ovf=0
+[PASS] t=8000 | a=1, b=2, cin=1 | sum=4, ovf=0
+[PASS] t=9000 | a=-1, b=1, cin=0 | sum=0, ovf=0
+[PASS] t=10000 | a=-10, b=3, cin=1 | sum=-6, ovf=0
+[PASS] t=11000 | a=-15, b=-20, cin=0 | sum=-35, ovf=0
+[PASS] t=12000 | a=8388607, b=0, cin=0 | sum=8388607, ovf=0
+[PASS] t=13000 | a=-8388608, b=0, cin=0 | sum=-8388608, ovf=0
+[PASS] t=14000 | a=-8388608, b=1, cin=0 | sum=-8388607, ovf=0
+[PASS] t=15000 | a=8388607, b=1, cin=0 | sum=-8388608, ovf=1
+[PASS] t=16000 | a=8388607, b=0, cin=1 | sum=-8388608, ovf=1
+[PASS] t=17000 | a=7000000, b=2000000, cin=0 | sum=-7777216, ovf=1
+[PASS] t=18000 | a=-8388608, b=-1, cin=0 | sum=8388607, ovf=1
+[PASS] t=19000 | a=-8388608, b=-1, cin=1 | sum=-8388608, ovf=0
+[PASS] t=20000 | a=-7000000, b=-2000000, cin=0 | sum=7777216, ovf=1
+[PASS] t=21000 | a=5000000, b=-4000000, cin=0 | sum=1000000, ovf=0
+[PASS] t=22000 | a=5000000, b=-4000000, cin=1 | sum=1000001, ovf=0
+[PASS] t=23000 | a=-5000000, b=4000000, cin=0 | sum=-1000000, ovf=0
+[PASS] t=24000 | a=1389860, b=-7774591, cin=1 | sum=-6384730, ovf=0
+[PASS] t=25000 | a=-1026461, b=-4621555, cin=1 | sum=-5648015, ovf=0
+[PASS] t=26000 | a=-4029339, b=3625490, cin=1 | sum=-403848, ovf=0
+[PASS] t=27000 | a=-2634483, b=2355574, cin=1 | sum=-278908, ovf=0
+[PASS] t=28000 | a=-2861075, b=3012492, cin=1 | sum=151418, ovf=0
+[PASS] t=29000 | a=3613894, b=-555835, cin=0 | sum=3058059, ovf=0
+[PASS] t=30000 | a=-5244955, b=-2985353, cin=0 | sum=-8230308, ovf=0
+[PASS] t=31000 | a=-1254513, b=3172850, cin=0 | sum=1918337, ovf=0
+[PASS] t=32000 | a=31464, b=-3518779, cin=0 | sum=-3487315, ovf=0
+[PASS] t=33000 | a=-7460675, b=-5547987, cin=1 | sum=3768555, ovf=1
+[PASS] t=34000 | a=-1088925, b=7571210, cin=0 | sum=6482285, ovf=0
+[PASS] t=35000 | a=6562080, b=7882154, cin=1 | sum=-2332981, ovf=1
+[PASS] t=36000 | a=2113174, b=-8144877, cin=1 | sum=-6031702, ovf=0
+[PASS] t=37000 | a=-5777837, b=-6300309, cin=1 | sum=4699071, ovf=1
+[PASS] t=38000 | a=1526274, b=5652142, cin=1 | sum=7178417, ovf=0
+[PASS] t=39000 | a=-3837233, b=-8107741, cin=0 | sum=4832242, ovf=1
+[PASS] t=40000 | a=7539402, b=3230780, cin=0 | sum=-6007034, ovf=1
+[PASS] t=41000 | a=3039626, b=-3886271, cin=0 | sum=-846645, ovf=0
+[PASS] t=42000 | a=2159480, b=-7728503, cin=1 | sum=-5569022, ovf=0
+[PASS] t=43000 | a=157110, b=4979142, cin=0 | sum=5136252, ovf=0
+========================================
+tb_adder_signed_24b DONE
+PASS = 38
+FAIL = 0
+========================================
+TEST PASSED
+Simulation complete via $finish(1) at time 43 NS + 0
+/home/yellow/ee3165_23/Tuna/01_tb/tb_adder_signed_24b.sv:118             $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s005: Exiting on Apr 01, 2026 at 22:43:40 +07  (total: 00:00:01)

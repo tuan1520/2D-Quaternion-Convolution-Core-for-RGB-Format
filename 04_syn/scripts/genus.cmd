@@ -1,0 +1,8 @@
+# Cadence Genus(TM) Synthesis Solution, Version 21.19-s055_1, built May 29 2024 16:33:07
+
+# Date: Fri Apr 03 00:36:27 2026
+# Host: pink.doelab.site (x86_64 w/Linux 4.18.0-553.40.1.el8_10.x86_64) (42cores*42cpus*1physical cpu*QEMU Virtual CPU version 2.5+ 16384KB)
+# OS:   Rocky Linux release 8.10 (Green Obsidian)
+
+source run_genus.tcl
+exit

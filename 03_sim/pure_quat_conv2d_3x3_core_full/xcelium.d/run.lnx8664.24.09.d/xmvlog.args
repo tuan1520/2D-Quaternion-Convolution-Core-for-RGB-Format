@@ -1,0 +1,37 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.24.09.d
+-RUNMODE
+../../00_src/half_adder_1b.sv
+../../00_src/full_adder_1b.sv
+../../00_src/cla_3b.sv
+../../00_src/cla_4b.sv
+../../00_src/adder_unsigned_6b.sv
+../../00_src/adder_signed_24b.sv
+../../00_src/adder_signed_18b.sv
+../../00_src/booth_shifted_product.sv
+../../00_src/wallace_tree.sv
+../../00_src/multiplier_booth_wallace_9core.sv
+../../00_src/tap_3x3_4lane.sv
+../../00_src/accumulator_9tap_4lane.sv
+../../00_src/two_line_buffer.sv
+../../00_src/window_generator_3x3.sv
+../../00_src/rgb_stream_in.sv
+../../00_src/kernel.sv
+../../00_src/pure_quat_conv2d_3x3_controller.sv
+../../00_src/pure_quat_conv2d_3x3_core.sv
+../../01_tb/tb_pure_quat_conv2d_3x3_core_full.sv
+-sv
+-CDSLIB
+./xcelium.d/run.lnx8664.24.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.24.09.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.24.09.d/xllibs
+-ALLOWUNBOUND

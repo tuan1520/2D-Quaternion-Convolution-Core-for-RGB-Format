@@ -1,0 +1,19 @@
+## Timing Report Summary – 500 MHz (Updated SDC Setup)
+
+### Run Condition
+The timing report was regenerated for `pure_quat_conv2d_3x3_core` at **500 MHz** (`T = 2.0 ns`) after updating the timing constraints to a more suitable block-level setup. In this new report, the top reported paths are no longer I/O-delay dominated, and the timing analysis now reflects the internal register-to-register behavior of the design more accurately. :contentReference[oaicite:0]{index=0}
+
+### Main Result
+After rerunning synthesis with the updated SDC, the reported paths are now **timing-clean**. The top paths are marked **MET**, with a reported slack of **+1179 ps**. This indicates that, under the updated constraint setup, the design is able to meet the **500 MHz** timing target with a comfortable positive margin. :contentReference[oaicite:1]{index=1}
+
+### Interpretation of the New Critical Paths
+Unlike the previous report, the top paths in this run are true **internal reg-to-reg paths**. The reported startpoint is `u_controller_valid_pipe_reg[4]`, and the endpoints are registers such as `u_booth_shifted_product_o_pp0_reg[0]` inside several Booth multiplier instances within `u_tap_3x3_4lane`. The data path delay of these paths is about **755 ps**, while the required time is **1934 ps**, resulting in a slack of **+1179 ps**. This means the timing bottleneck is now being observed on an internal control-distribution path associated with Booth partial-product pipeline registers, rather than on artificial I/O timing paths. :contentReference[oaicite:2]{index=2}
+
+### What This Means for the Original Suspicion
+This updated report provides a much more reliable view of the real timing behavior. It shows that the previous negative slack was mainly caused by overly strict I/O constraints, not by the controller output logic to external ports. After correcting the SDC, the design successfully meets timing, and the reported top paths now pass with a large positive margin. Therefore, based on this run, there is **no evidence that the design currently fails 500 MHz timing**. :contentReference[oaicite:3]{index=3}
+
+### About the Reported Fanout
+The report still shows a very large fanout value around **10145** at the `CK` pin of the launching register. This should still be interpreted as a **clock network fanout**, not as the fanout of the controller data signal itself. The actual launch from `u_controller_valid_pipe_reg[4]/Q` has a much smaller fanout of **3**. However, deeper in the path, the timing report also shows large fanout stages such as **351** and **299**, which suggests that the internal valid/control signal is being distributed broadly across multiple Booth-related sub-blocks and is being buffered heavily by synthesis. :contentReference[oaicite:4]{index=4}
+
+### Current Conclusion
+With the updated SDC, the 500 MHz target is currently **met** in the reported timing paths. The present top timing paths are internal control paths feeding Booth multiplier pipeline registers, and they still have substantial slack. Therefore, at this stage, no immediate RTL change is required solely for 500 MHz closure based on this report. If later optimization is needed for a higher target frequency, the most relevant area to inspect would be the internal control distribution into the Booth multiplier pipeline stages rather than the previously suspected I/O paths. :contentReference[oaicite:5]{index=5}
