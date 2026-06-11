@@ -1,0 +1,16 @@
+#e1(02Apr2026:02:32:52): source ./xcelium.d/env.d/env.history.02Apr2026_02_32_52
+s1(02Apr2026:02:32:52):  xrun -f filelist_pure_quat_conv2d_3x3_controller.f -sv +access+rw 
+#e2(02Apr2026:02:41:26): source ./xcelium.d/env.d/env.history.02Apr2026_02_41_26
+s2(02Apr2026:02:41:26):  xrun -f filelist_pure_quat_conv2d_3x3_controller.f -sv +access+rw 
+#e3(02Apr2026:02:56:20): source ./xcelium.d/env.d/env.history.02Apr2026_02_56_20
+s3(02Apr2026:02:56:20):  xrun -f filelist_pure_quat_conv2d_3x3_controller.f -sv +access+rw 
+#e4(02Apr2026:18:01:37): source ./xcelium.d/env.d/env.history.02Apr2026_18_01_37
+s4(02Apr2026:18:01:37):  xrun -f filelist_pure_quat_conv2d_3x3_controller.f -sv +access+rw 
+#e5(02Apr2026:18:02:26): source ./xcelium.d/env.d/env.history.02Apr2026_18_02_26
+s5(02Apr2026:18:02:26):  xrun -f filelist_pure_quat_conv2d_3x3_controller.f -sv +access+rw 
+#e6(02Apr2026:18:18:53): source ./xcelium.d/env.d/env.history.02Apr2026_18_18_53
+s6(02Apr2026:18:18:53):  xrun -f filelist_pure_quat_conv2d_3x3_controller.f -sv +access+rw 
+#e7(21Apr2026:22:37:34): source ./xcelium.d/env.d/env.history.21Apr2026_22_37_34
+s7(21Apr2026:22:37:34):  xrun -f filelist_pure_quat_conv2d_3x3_controller.f +access+rw -sv 
+#e8(21Apr2026:22:46:20): source ./xcelium.d/env.d/env.history.21Apr2026_22_46_20
+s8(21Apr2026:22:46:20):  xrun -f filelist_pure_quat_conv2d_3x3_controller.f +access+rw -sv 

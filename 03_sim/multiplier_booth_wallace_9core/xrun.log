@@ -1,0 +1,199 @@
+xrun(64): 24.09-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s005: Started on Apr 02, 2026 at 00:26:04 +07
+xrun
+	-f filelist_multiplier_booth_wallace_9core.f
+		../../00_src/xor_gate.sv
+		../../00_src/half_adder_1b.sv
+		../../00_src/full_adder_1b.sv
+		../../00_src/cla_3b.sv
+		../../00_src/cla_4b.sv
+		../../00_src/adder_signed_24b.sv
+		../../00_src/adder_signed_18b.sv
+		../../00_src/booth_shifted_product.sv
+		../../00_src/wallace_tree.sv
+		../../00_src/multiplier_booth_wallace_9core.sv
+		../../01_tb/tb_multiplier_booth_wallace_9core.sv
+	-sv
+	+access+rw
+file: ../../00_src/xor_gate.sv
+	module worklib.xor_gate:sv
+		errors: 0, warnings: 0
+file: ../../00_src/half_adder_1b.sv
+	module worklib.half_adder_1b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/full_adder_1b.sv
+	module worklib.full_adder_1b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/cla_3b.sv
+	module worklib.cla_3b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/cla_4b.sv
+	module worklib.cla_4b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/adder_signed_24b.sv
+	module worklib.adder_signed_24b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/adder_signed_18b.sv
+	module worklib.adder_signed_18b:sv
+		errors: 0, warnings: 0
+file: ../../00_src/booth_shifted_product.sv
+	module worklib.booth_3b_group_gen:sv
+		errors: 0, warnings: 0
+	module worklib.booth_encoder_radix4:sv
+		errors: 0, warnings: 0
+	module worklib.booth_pp_gen_18b:sv
+		errors: 0, warnings: 0
+	module worklib.booth_recode_9b:sv
+		errors: 0, warnings: 0
+	module worklib.booth_shifted_product:sv
+		errors: 0, warnings: 0
+file: ../../00_src/wallace_tree.sv
+	module worklib.wallace_5to2_18b:sv
+		errors: 0, warnings: 0
+	module worklib.wallace_tree:sv
+		errors: 0, warnings: 0
+file: ../../00_src/multiplier_booth_wallace_9core.sv
+	module worklib.multiplier_booth_wallace_1core:sv
+		errors: 0, warnings: 0
+	module worklib.multiplier_booth_wallace_9core:sv
+		errors: 0, warnings: 0
+file: ../../01_tb/tb_multiplier_booth_wallace_9core.sv
+	module worklib.tb_multiplier_booth_wallace_9core:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		half_adder_1b
+		cla_3b
+		tb_multiplier_booth_wallace_9core
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.adder_signed_18b:sv <0x342a9887>
+			streams:  30, words: 12497
+		worklib.full_adder_1b:sv <0x7a30dd59>
+			streams:   6, words:  1707
+		worklib.wallace_tree:sv <0x490cd661>
+			streams:  10, words:  2921
+		worklib.cla_4b:sv <0x54dea648>
+			streams:  17, words:  8584
+		worklib.adder_signed_24b:sv <0x7a83b8f3>
+			streams:  26, words: 13707
+		worklib.booth_pp_gen_18b:sv <0x0a386127>
+			streams:  11, words:  4354
+		worklib.booth_encoder_radix4:sv <0x61fb81a7>
+			streams:   1, words:   403
+		worklib.booth_3b_group_gen:sv <0x7b51f975>
+			streams:   1, words:   951
+		worklib.booth_recode_9b:sv <0x69867e91>
+			streams:  15, words:  4330
+		worklib.booth_shifted_product:sv <0x6ca6c12f>
+			streams:  23, words:  7207
+		worklib.multiplier_booth_wallace_1core:sv <0x357b215d>
+			streams:  12, words:  3584
+		worklib.multiplier_booth_wallace_9core:sv <0x6ca41d66>
+			streams:  18, words:  6759
+		worklib.tb_multiplier_booth_wallace_9core:sv <0x329d1a6f>
+			streams:  27, words: 52350
+		worklib.cla_3b:sv <0x6d525942>
+			streams:  14, words:  6122
+		worklib.xor_gate:sv <0x09932f20>
+			streams:   3, words:   700
+		worklib.half_adder_1b:sv <0x2a7a9221>
+			streams:   2, words:   445
+		worklib.wallace_5to2_18b:sv <0x18dddc43>
+			streams:  13, words:  4177
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                6,932      17
+		Registers:             27,294     214
+		Scalar wires:          46,907       -
+		Expanded wires:         5,454     243
+		Vectored wires:         2,427       -
+		Always blocks:            109       5
+		Initial blocks:             3       3
+		Cont. assignments:     21,762      63
+		Pseudo assignments:    13,069       -
+		Process Clocks:            18       1
+		Simulation timescale:     1ps
+	Writing initial simulation snapshot: worklib.half_adder_1b:sv
+Loading snapshot worklib.half_adder_1b:sv .................... Done
+xcelium> source /home/yellow/ee3165_23/tools/eda/cadence/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> run
+--------------------------------------------------
+[CASE] RESET_INIT | t=3000
+  rst_o : RP=0 RQ=0 RS=0 | GP=0 GQ=0 GS=0 | BP=0 BQ=0 BS=0
+[PASS] RESET_INIT
+--------------------------------------------------
+[CASE] CAP_ZERO | t=36000
+  in  : R=0 G=0 B=0 | P=0 Q=0 S=0
+  exp : RP=0 RQ=0 RS=0 | GP=0 GQ=0 GS=0 | BP=0 BQ=0 BS=0
+  obs : RP=0 RQ=0 RS=0 | GP=0 GQ=0 GS=0 | BP=0 BQ=0 BS=0
+[PASS] CAP_ZERO
+--------------------------------------------------
+[CASE] HOLD_AFTER_ZERO | t=56000
+  new_in : R=1 G=2 B=3 | P=4 Q=5 S=6
+  hold_o : RP=0 RQ=0 RS=0 | GP=0 GQ=0 GS=0 | BP=0 BQ=0 BS=0
+[PASS] HOLD_AFTER_ZERO
+--------------------------------------------------
+[CASE] CAP_ALL_POS_SMALL | t=76000
+  in  : R=1 G=2 B=3 | P=4 Q=5 S=6
+  exp : RP=4 RQ=5 RS=6 | GP=8 GQ=10 GS=12 | BP=12 BQ=15 BS=18
+  obs : RP=4 RQ=5 RS=6 | GP=8 GQ=10 GS=12 | BP=12 BQ=15 BS=18
+[PASS] CAP_ALL_POS_SMALL
+--------------------------------------------------
+[CASE] CAP_ALT_SIGN_1 | t=96000
+  in  : R=-1 G=2 B=-3 | P=4 Q=-5 S=6
+  exp : RP=-4 RQ=5 RS=-6 | GP=8 GQ=-10 GS=12 | BP=-12 BQ=15 BS=-18
+  obs : RP=-4 RQ=5 RS=-6 | GP=8 GQ=-10 GS=12 | BP=-12 BQ=15 BS=-18
+[PASS] CAP_ALT_SIGN_1
+--------------------------------------------------
+[CASE] CAP_ALT_SIGN_2 | t=116000
+  in  : R=5 G=-7 B=9 | P=-3 Q=2 S=-1
+  exp : RP=-15 RQ=10 RS=-5 | GP=21 GQ=-14 GS=7 | BP=-27 BQ=18 BS=-9
+  obs : RP=-15 RQ=10 RS=-5 | GP=21 GQ=-14 GS=7 | BP=-27 BQ=18 BS=-9
+[PASS] CAP_ALT_SIGN_2
+--------------------------------------------------
+[CASE] CAP_MIXED_1 | t=136000
+  in  : R=37 G=85 B=-12 | P=7 Q=-9 S=11
+  exp : RP=259 RQ=-333 RS=407 | GP=595 GQ=-765 GS=935 | BP=-84 BQ=108 BS=-132
+  obs : RP=259 RQ=-333 RS=407 | GP=595 GQ=-765 GS=935 | BP=-84 BQ=108 BS=-132
+[PASS] CAP_MIXED_1
+--------------------------------------------------
+[CASE] CAP_MIXED_2 | t=156000
+  in  : R=-73 G=-45 B=18 | P=-6 Q=13 S=-4
+  exp : RP=438 RQ=-949 RS=292 | GP=270 GQ=-585 GS=180 | BP=-108 BQ=234 BS=-72
+  obs : RP=438 RQ=-949 RS=292 | GP=270 GQ=-585 GS=180 | BP=-108 BQ=234 BS=-72
+[PASS] CAP_MIXED_2
+--------------------------------------------------
+[CASE] CAP_BOUNDARY_1 | t=176000
+  in  : R=255 G=128 B=-256 | P=1 Q=-1 S=2
+  exp : RP=255 RQ=-255 RS=510 | GP=128 GQ=-128 GS=256 | BP=-256 BQ=256 BS=-512
+  obs : RP=255 RQ=-255 RS=510 | GP=128 GQ=-128 GS=256 | BP=-256 BQ=256 BS=-512
+[PASS] CAP_BOUNDARY_1
+--------------------------------------------------
+[CASE] CAP_BOUNDARY_2 | t=196000
+  in  : R=-256 G=255 B=127 | P=-1 Q=2 S=-2
+  exp : RP=256 RQ=-512 RS=512 | GP=-255 GQ=510 GS=-510 | BP=-127 BQ=254 BS=-254
+  obs : RP=256 RQ=-512 RS=512 | GP=-255 GQ=510 GS=-510 | BP=-127 BQ=254 BS=-254
+[PASS] CAP_BOUNDARY_2
+--------------------------------------------------
+[CASE] HOLD_AFTER_NONZERO | t=216000
+  new_in : R=10 G=20 B=30 | P=40 Q=50 S=60
+  hold_o : RP=256 RQ=-512 RS=512 | GP=-255 GQ=510 GS=-510 | BP=-127 BQ=254 BS=-254
+[PASS] HOLD_AFTER_NONZERO
+--------------------------------------------------
+[CASE] RESET_MID | t=219000
+  rst_o : RP=0 RQ=0 RS=0 | GP=0 GQ=0 GS=0 | BP=0 BQ=0 BS=0
+[PASS] RESET_MID
+========================================
+tb_multiplier_booth_wallace_9core DONE
+PASS = 12
+FAIL = 0
+========================================
+TEST PASSED
+Simulation complete via $finish(1) at time 219 NS + 0
+/home/yellow/ee3165_23/Tuna/01_tb/tb_multiplier_booth_wallace_9core.sv:321             $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s005: Exiting on Apr 02, 2026 at 00:26:08 +07  (total: 00:00:04)

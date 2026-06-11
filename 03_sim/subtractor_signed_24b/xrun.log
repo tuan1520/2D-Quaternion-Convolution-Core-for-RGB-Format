@@ -1,0 +1,100 @@
+xrun(64): 24.09-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s005: Started on Apr 01, 2026 at 22:51:05 +07
+xrun
+	-f filelist_subtractor_signed_24b.f
+		../../00_src/xor_gate.sv
+		../../00_src/half_adder_1b.sv
+		../../00_src/full_adder_1b.sv
+		../../00_src/cla_4b.sv
+		../../00_src/adder_signed_24b.sv
+		../../00_src/subtractor_signed_24b.sv
+		../../01_tb/tb_subtractor_signed_24b.sv
+	-sv
+	+access+rw
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		half_adder_1b
+		full_adder_1b
+		tb_subtractor_signed_24b
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.cla_4b:sv <0x54dea648>
+			streams:  17, words:  8584
+		worklib.adder_signed_24b:sv <0x1553d564>
+			streams:  26, words: 13707
+		worklib.subtractor_signed_24b:sv <0x3b87e0e0>
+			streams:   5, words:  1465
+		worklib.tb_subtractor_signed_24b:sv <0x370dd14e>
+			streams:   6, words: 14157
+		worklib.full_adder_1b:sv <0x433c8301>
+			streams:   6, words:  1537
+		worklib.xor_gate:sv <0x09932f20>
+			streams:   3, words:   700
+		worklib.half_adder_1b:sv <0x2a7a9221>
+			streams:   2, words:   445
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                62       7
+		Registers:             245      45
+		Scalar wires:          412       -
+		Expanded wires:         48       2
+		Vectored wires:         19       -
+		Initial blocks:          2       2
+		Cont. assignments:     191      27
+		Pseudo assignments:    106       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.half_adder_1b:sv
+Loading snapshot worklib.half_adder_1b:sv .................... Done
+xcelium> source /home/yellow/ee3165_23/tools/eda/cadence/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> run
+[PASS] t=6000 | a=0 (0x000000), b=0 (0x000000) | diff=0 (0x000000)
+[PASS] t=7000 | a=10 (0x00000a), b=3 (0x000003) | diff=7 (0x000007)
+[PASS] t=8000 | a=3 (0x000003), b=10 (0x00000a) | diff=-7 (0xfffff9)
+[PASS] t=9000 | a=-10 (0xfffff6), b=3 (0x000003) | diff=-13 (0xfffff3)
+[PASS] t=10000 | a=10 (0x00000a), b=-3 (0xfffffd) | diff=13 (0x00000d)
+[PASS] t=11000 | a=-15 (0xfffff1), b=-20 (0xffffec) | diff=5 (0x000005)
+[PASS] t=12000 | a=8388607 (0x7fffff), b=0 (0x000000) | diff=8388607 (0x7fffff)
+[PASS] t=13000 | a=-8388608 (0x800000), b=0 (0x000000) | diff=-8388608 (0x800000)
+[PASS] t=14000 | a=-8388608 (0x800000), b=1 (0x000001) | diff=8388607 (0x7fffff)
+[PASS] t=15000 | a=8388607 (0x7fffff), b=-1 (0xffffff) | diff=-8388608 (0x800000)
+[PASS] t=16000 | a=8388607 (0x7fffff), b=-8388608 (0x800000) | diff=-1 (0xffffff)
+[PASS] t=17000 | a=-8388608 (0x800000), b=8388607 (0x7fffff) | diff=1 (0x000001)
+[PASS] t=18000 | a=7000000 (0x6acfc0), b=-2000000 (0xe17b80) | diff=-7777216 (0x895440)
+[PASS] t=19000 | a=-7000000 (0x953040), b=2000000 (0x1e8480) | diff=7777216 (0x76abc0)
+[PASS] t=20000 | a=5000000 (0x4c4b40), b=-4000000 (0xc2f700) | diff=-7777216 (0x895440)
+[PASS] t=21000 | a=-5000000 (0xb3b4c0), b=4000000 (0x3d0900) | diff=7777216 (0x76abc0)
+[PASS] t=22000 | a=1234567 (0x12d687), b=1234567 (0x12d687) | diff=0 (0x000000)
+[PASS] t=23000 | a=1234567 (0x12d687), b=-1234567 (0xed2979) | diff=2469134 (0x25ad0e)
+[PASS] t=24000 | a=1389860 (0x153524), b=-7774591 (0x895e81) | diff=-7612765 (0x8bd6a3)
+[PASS] t=25000 | a=-8071671 (0x84d609), b=-1026461 (0xf05663) | diff=-7045210 (0x947fa6)
+[PASS] t=26000 | a=-4621555 (0xb97b0d), b=-2123379 (0xdf998d) | diff=-2498176 (0xd9e180)
+[PASS] t=27000 | a=-4029339 (0xc28465), b=3625490 (0x375212) | diff=-7654829 (0x8b3253)
+[PASS] t=28000 | a=-793855 (0xf3e301), b=-2634483 (0xd7cd0d) | diff=1840628 (0x1c15f4)
+[PASS] t=29000 | a=2355574 (0x23f176), b=-7484099 (0x8dcd3d) | diff=-6937543 (0x962439)
+[PASS] t=30000 | a=-2861075 (0xd457ed), b=3012492 (0x2df78c) | diff=-5873567 (0xa66061)
+[PASS] t=31000 | a=-136711 (0xfde9f9), b=3613894 (0x3724c6) | diff=-3750605 (0xc6c533)
+[PASS] t=32000 | a=-555835 (0xf784c5), b=1299114 (0x13d2aa) | diff=-1854949 (0xe3b21b)
+[PASS] t=33000 | a=-5244955 (0xaff7e5), b=-2985353 (0xd27277) | diff=-2259602 (0xdd856e)
+[PASS] t=34000 | a=3331602 (0x32d612), b=-1254513 (0xecdb8f) | diff=4586115 (0x45fa83)
+[PASS] t=35000 | a=3172850 (0x3069f2), b=7771854 (0x7696ce) | diff=-4599004 (0xb9d324)
+[PASS] t=36000 | a=31464 (0x007ae8), b=-3518779 (0xca4ec5) | diff=3550243 (0x362c23)
+[PASS] t=37000 | a=5785948 (0x58495c), b=-7460675 (0x8e28bd) | diff=-3530593 (0xca209f)
+[PASS] t=38000 | a=-5547987 (0xab582d), b=-5822875 (0xa72665) | diff=274888 (0x0431c8)
+[PASS] t=39000 | a=-1088925 (0xef6263), b=7571210 (0x73870a) | diff=8117081 (0x7bdb59)
+[PASS] t=40000 | a=3875456 (0x3b2280), b=6562080 (0x642120) | diff=-2686624 (0xd70160)
+[PASS] t=41000 | a=7882154 (0x7845aa), b=-3355491 (0xcccc9d) | diff=-5539571 (0xab790d)
+[PASS] t=42000 | a=2113174 (0x203e96), b=-8144877 (0x83b813) | diff=-6519165 (0x9c8683)
+[PASS] t=43000 | a=-4442099 (0xbc380d), b=-5777837 (0xa7d653) | diff=1335738 (0x1461ba)
+========================================
+tb_subtractor_signed_24b DONE
+PASS = 38
+FAIL = 0
+========================================
+TEST PASSED
+Simulation complete via $finish(1) at time 43 NS + 0
+/home/yellow/ee3165_23/Tuna/01_tb/tb_subtractor_signed_24b.sv:109             $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s005: Exiting on Apr 01, 2026 at 22:51:07 +07  (total: 00:00:02)

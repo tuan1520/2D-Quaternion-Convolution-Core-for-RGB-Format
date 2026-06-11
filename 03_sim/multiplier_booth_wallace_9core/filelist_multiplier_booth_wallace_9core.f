@@ -1,0 +1,10 @@
+../../00_src/half_adder_1b.sv
+../../00_src/full_adder_1b.sv
+../../00_src/cla_3b.sv
+../../00_src/cla_4b.sv
+../../00_src/adder_signed_24b.sv
+../../00_src/adder_signed_18b.sv
+../../00_src/booth_shifted_product.sv
+../../00_src/wallace_tree.sv
+../../00_src/multiplier_booth_wallace_9core.sv
+../../01_tb/tb_multiplier_booth_wallace_9core.sv

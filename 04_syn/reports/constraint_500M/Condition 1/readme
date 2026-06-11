@@ -1,0 +1,85 @@
+## Timing Report Summary – 500 MHz (Current I/O Delay Setup)
+
+### Run Condition
+This timing result was generated for the top module `pure_quat_conv2d_3x3_core` at a clock frequency of **500 MHz** (`T = 2.0 ns`).
+
+The current timing constraints used in this run are summarized as follows:
+- Clock period: **2.0 ns**
+- Clock uncertainty: **0.2 ns**
+- Input delay: **2.0 ns**
+- Output delay: **2.0 ns**
+
+### Initial Observation
+At first glance, the timing report shows several **negative slack** paths, with the worst slack around **-296 ps**.  
+However, after checking the detailed report, these violations are **not caused by a long internal datapath** such as the Booth multiplier, Wallace tree, or arithmetic pipeline.  
+Instead, the violations mainly come from the **I/O timing constraints**, which are currently too strict for this block-level synthesis setup.
+
+### Explanation of the Reported Violations
+
+#### 1. Output paths
+The first violated paths are from internal registers to output ports such as:
+- `o_out_latch`
+- `o_out_valid`
+- `o_ker_done`
+
+Although these paths are reported as failing, their actual combinational delay is very small:
+- `o_out_latch`: about **96 ps**
+- `o_out_valid`: about **96 ps**
+- `o_ker_done`: about **91 ps**
+
+The reason they still fail is that the current constraint uses:
+- `output_delay = 2.0 ns`
+- `clock uncertainty = 0.2 ns`
+
+With a 2.0 ns clock, this means the required time for those output paths becomes effectively very tight, leaving no practical margin for the internal block itself.  
+Therefore, the reported negative slack in these paths should be interpreted as a **constraint-side issue**, not as evidence that the controller or output logic is too slow.
+
+#### 2. Input path to kernel configuration enable
+Another group of violated paths starts from `i_ker_cfg_valid` and ends at the `SE` pins of many kernel register flip-flops.
+
+These paths also have a very short actual data delay, about **68 ps**, but still fail because the current setup uses:
+- `input_delay = 2.0 ns`
+- `clock uncertainty = 0.2 ns`
+
+This again makes the required timing window too tight for a block-level timing check.  
+As a result, these violations also reflect the **chosen I/O constraints**, not a true internal critical datapath problem.
+
+### Important Interpretation
+From this report, the current negative slack at 500 MHz **should not yet be used to conclude that the internal arithmetic datapath is failing timing**.
+
+In particular, this run does **not** provide enough evidence to say that:
+- the controller is the critical block, or
+- `booth_shifted_product` is the current worst timing bottleneck.
+
+The top reported violations are dominated by:
+- register-to-output-port timing under a full 2.0 ns output delay constraint, and
+- input-to-register-enable timing under a full 2.0 ns input delay constraint.
+
+### About the Large Fanout Number
+The report also shows a very large fanout value (around **10145**) at some `CK` pins.
+
+This does **not** mean that the controller output itself has a fanout of 10,000.  
+That number is associated with the **clock network** driving many flip-flops in the design, so it is expected to be very large.  
+The actual fanout of the logic signal launched from the register output in the failing paths is small.
+
+### Conclusion for This Run
+For the current 500 MHz report, the observed negative slack is mainly caused by the **I/O delay assumptions** rather than by the true internal critical path of the datapath.
+
+Therefore, the next recommended step is:
+1. reduce the input/output delay values to more appropriate block-level values, and
+2. regenerate the timing report,
+3. then inspect **register-to-register paths** to identify the true internal critical path.
+
+---
+
+## Next Update Placeholder
+After rerunning synthesis with updated delay constraints, add a new section here:
+
+### Timing Report Summary – 500 MHz (Updated I/O Delay Setup)
+- Updated clock uncertainty:
+- Updated input delay:
+- Updated output delay:
+- Worst slack:
+- Whether violations remain on I/O paths or move to internal reg-to-reg paths:
+- Suspected true critical module:
+- Final conclusion:

@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-f
+filelist_pure_quat_conv2d_3x3_core_full.f
++access+rw
+-sv

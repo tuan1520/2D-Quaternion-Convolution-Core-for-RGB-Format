@@ -1,0 +1,2 @@
+#e1(02Apr2026:00:44:09): source ./xcelium.d/env.d/env.history.02Apr2026_00_44_09
+s1(02Apr2026:00:44:09):  xrun -f filelist_tap_4lane.f -sv +access+rw 

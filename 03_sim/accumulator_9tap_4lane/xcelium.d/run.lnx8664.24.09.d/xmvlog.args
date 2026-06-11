@@ -1,0 +1,25 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.24.09.d
+-RUNMODE
+../../00_src/xor_gate.sv
+../../00_src/half_adder_1b.sv
+../../00_src/full_adder_1b.sv
+../../00_src/cla_4b.sv
+../../00_src/adder_signed_24b.sv
+../../00_src/accumulator_9tap_4lane.sv
+../../01_tb/tb_accumulator_9tap_4lane.sv
+-sv
+-CDSLIB
+./xcelium.d/run.lnx8664.24.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.24.09.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.24.09.d/xllibs
+-ALLOWUNBOUND

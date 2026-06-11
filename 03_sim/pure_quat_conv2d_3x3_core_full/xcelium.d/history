@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(02Apr2026:20:58:15):( xrun -f filelist_pure_quat_conv2d_3x3_core_full.f +rw+access -sv )&&(./xcelium.d/env.d/env.history.02Apr2026_20_58_15)
+s2::(02Apr2026:21:17:02):( xrun -f filelist_pure_quat_conv2d_3x3_core_full.f +rw+access -sv )&&(./xcelium.d/env.d/env.history.02Apr2026_21_17_02)
+s3::(07Apr2026:16:56:30):( xrun -f filelist_pure_quat_conv2d_3x3_core_full.f -sv +access+rw )&&(./xcelium.d/env.d/env.history.07Apr2026_16_56_30)
+s4::(21Apr2026:22:38:49):( xrun -f filelist_pure_quat_conv2d_3x3_core_full.f +access+rw -sv )&&(./xcelium.d/env.d/env.history.21Apr2026_22_38_49)
+s5::(21Apr2026:22:48:31):( xrun -f filelist_pure_quat_conv2d_3x3_core_full.f +access+rw -sv )&&(./xcelium.d/env.d/env.history.21Apr2026_22_48_31)
+s6::(21Apr2026:22:50:23):( xrun -f filelist_pure_quat_conv2d_3x3_core_full.f +access+rw -sv )&&(./xcelium.d/env.d/env.history.21Apr2026_22_50_23)

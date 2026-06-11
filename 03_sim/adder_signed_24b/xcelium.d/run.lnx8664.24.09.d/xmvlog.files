@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/yellow/ee3165_23/Tuna/00_src/xor_gate.sv
+/home/yellow/ee3165_23/Tuna/00_src/half_adder_1b.sv
+/home/yellow/ee3165_23/Tuna/00_src/full_adder_1b.sv
+/home/yellow/ee3165_23/Tuna/00_src/cla_4b.sv
+/home/yellow/ee3165_23/Tuna/00_src/adder_signed_24b.sv
+/home/yellow/ee3165_23/Tuna/01_tb/tb_adder_signed_24b.sv
