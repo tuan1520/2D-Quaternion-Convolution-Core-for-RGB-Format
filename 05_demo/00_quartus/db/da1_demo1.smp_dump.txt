@@ -1,9 +1,0 @@
-
-State Machine - |da1_demo1|pure_quat_conv2d_3x3_core:u_core|pure_quat_conv2d_3x3_controller:u_controller|state_cur
-Name state_cur.ST_DONE state_cur.ST_FLUSH state_cur.ST_RUN state_cur.ST_FILL state_cur.ST_LOAD_KERNEL state_cur.ST_IDLE 
-state_cur.ST_IDLE 0 0 0 0 0 0 
-state_cur.ST_LOAD_KERNEL 0 0 0 0 1 1 
-state_cur.ST_FILL 0 0 0 1 0 1 
-state_cur.ST_RUN 0 0 1 0 0 1 
-state_cur.ST_FLUSH 0 1 0 0 0 1 
-state_cur.ST_DONE 1 0 0 0 0 1 
